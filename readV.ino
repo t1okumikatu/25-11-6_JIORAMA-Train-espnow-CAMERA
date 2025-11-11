@@ -15,9 +15,9 @@ const unsigned long voltageInterval = 3000; // 3秒ごと
     sendData.voltage = readBattery();
     esp_err_t result = esp_now_send(stationAddress, (uint8_t *)&sendData, sizeof(sendData));
     if(result==ESP_OK){
-    Serial.print("[Send Voltage] ");
-    Serial.print(sendData.voltage, 2);
-    Serial.println(" V");
+    //Serial.print("[Send Voltage] ");
+    Serial.println(sendData.voltage, 2);
+    //Serial.println(" V");
   } else {
     Serial.println("送信エラー❣");
   }
